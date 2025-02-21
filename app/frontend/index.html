@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitoring</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> <!-- ✅ Use ApexCharts -->
+</head>
+<body>
+    <div class="container">
+        <h1>System Monitoring Dashboard</h1>
+
+        <!-- ✅ CPU & Memory Usage Section -->
+        <div class="system-info">
+            <div class="info-box">
+                <h2>CPU Usage</h2>
+                <p><span id="cpu_usage">Loading...</span> %</p>
+                <div id="cpuChart"></div> <!-- ✅ Graph Container -->
+            </div>
+            <div class="info-box">
+                <h2>Memory Usage</h2>
+                <p><span id="memory_usage">Loading...</span> MB</p>
+                <div id="memoryChart"></div> <!-- ✅ Graph Container -->
+            </div>
+        </div>
+
+        <!-- ✅ API & Bot Logs -->
+        <div class="logs-container">
+            <div class="log-box">
+                <h2>API Logs</h2>
+                <div id="api_logs">Loading...</div>
+            </div>
+            <div class="log-box">
+                <h2>Bot Logs</h2>
+                <div id="bot_logs">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
