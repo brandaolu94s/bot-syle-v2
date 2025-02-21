@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function fetchStats() {
         try {
-            const response = await fetch("http://localhost:8000/system/stats");
+            const response = await fetch("http://localhost:8888/system/stats");
             const data = await response.json();
 
             document.getElementById("memory_usage").textContent = data.memory_usage_mb;
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function fetchAPILogs() {
         try {
-            const response = await fetch("http://localhost:8000/logs/api");
+            const response = await fetch("http://localhost:8888/logs/api");
             const data = await response.json();
 
             document.getElementById("api_logs").innerHTML = data.logs
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function fetchBotLogs() {
         try {
-            const response = await fetch("http://localhost:8000/logs/bot");
+            const response = await fetch("http://localhost:8888/logs/bot");
             const data = await response.json();
 
             document.getElementById("bot_logs").innerHTML = data.logs

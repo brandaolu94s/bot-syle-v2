@@ -11,7 +11,7 @@ from models import GuiaLogs
 
 app = FastAPI()  # ✅ Create FastAPI app here
 
-app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
+app.mount("/frontend", StaticFiles(directory=r"C:\Users\Lenovo\Documents\GitHub\bot-syle-v2\app\frontend"), name="frontend")
 
 process = psutil.Process(os.getpid())  # ✅ Cache the process info
 
