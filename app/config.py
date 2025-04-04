@@ -22,7 +22,13 @@ class Config:
     DB_NAME = os.getenv('DB_NAME')
     DB_TABLE = os.getenv('DB_TABLE')
     LOG_TABLE = os.getenv('LOG_TABLE')
-
+    CONNECTION_STRING = (
+                        f"DRIVER={DB_DRIVER};"
+                        f"SERVER={DB_HOST},{DB_PORT};"
+                        f"DATABASE={DB_NAME};"
+                        f"UID={DB_USER};PWD={DB_PASSWORD};"
+                        f"Encrypt=yes;TrustServerCertificate=yes;"
+                        )
     # INSTANCES
     INSTANCES = os.getenv('INSTANCES')
 
